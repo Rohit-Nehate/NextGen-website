@@ -1,0 +1,58 @@
+
+    
+        :root {
+            --primary-blue: #3B82F6;
+            --secondary-blue: #1E40AF;
+        }
+        html, body {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        body {
+            background: linear-gradient(135deg, #EFF6FF, #DBEAFE);
+            font-family: 'Inter', sans-serif;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .team-card {
+            transition: all 0.3s ease;
+        }
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        #contact-modal {
+            background: rgba(0,0,0,0.6);
+            display: none;
+        }
+        #contact-modal.show {
+            display: flex;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .glowing-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        .glowing-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3B82F6, #2563EB);
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
+    
